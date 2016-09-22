@@ -10,7 +10,8 @@ module.exports = function(grunt) {
 		  },
 		  files: [
 			{
-			  src: ["Gruntfile.js"]
+			  //src: ["ui-bootstrap**.js"]
+			  src: ["ui-bootstrap**.js","Gruntfile.js"]
 			}
 		  ]
 		}
@@ -22,7 +23,7 @@ module.exports = function(grunt) {
 			force: true
 		  },
 		  files: {
-			src: ["Gruntfile.js"]
+			src: ["ui-bootstrap**.js"]
 		  }
 		}
 	},
@@ -41,6 +42,6 @@ module.exports = function(grunt) {
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-git');
   
-  grunt.registerTask('setup', ['gitadd','gitcommit','gitpush']);
+  grunt.registerTask('setup', ['gitcommit','gitpush']);
 
 };
