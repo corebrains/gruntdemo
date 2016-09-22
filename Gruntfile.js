@@ -25,6 +25,16 @@ module.exports = function(grunt) {
 			src: ["Gruntfile.js"]
 		  }
 		}
+	},
+	
+	gitpush: {
+		push: {
+		  options: {
+			cwd: "dtbowercomponentsrepo",  
+			remote : 'origin',
+			branch : 'master'
+		  }
+		}
 	}
 	
   });
@@ -32,6 +42,6 @@ module.exports = function(grunt) {
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-git');
   
-  grunt.registerTask('setup', ['gitadd','gitcommit']);
+  grunt.registerTask('setup', ['gitadd','gitcommit','gitpush']);
 
 };
