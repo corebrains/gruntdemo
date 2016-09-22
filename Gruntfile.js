@@ -30,7 +30,6 @@ module.exports = function(grunt) {
 	gitpush: {
 		push: {
 		  options: {
-			cwd: "dtbowercomponentsrepo",  
 			remote : 'origin',
 			branch : 'master'
 		  }
